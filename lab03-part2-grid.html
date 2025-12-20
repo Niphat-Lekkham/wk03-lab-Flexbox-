@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce Dashboard - Grid Layout</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #f0f2f5;
+        color: #333;
+      }
+      /* Header - Flexbox */
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: white;
+        padding: 1rem 2rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+      }
+      .header-left {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #e74c3c;
+      }
+      .search-bar {
+        display: flex;
+        align-items: center;
+        background: #ecf0f1;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        width: 300px;
+      }
+      .search-bar input {
+        border: none;
+        background: transparent;
+        width: 100%;
+        outline: none;
+        padding: 0.5rem;
+      }
+      .header-right {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+      }
+      .header-btn {
+        background: #3498db;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      .header-btn:hover {
+        background: #2980b9;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-left">
+        <div class="logo">🛒🛒 ShopDash</div>
+        <div class="search-bar">
+          <input type="text" placeholder="ค้นหาสินค้า..." />
+          <span>🔍🔍</span>
+        </div>
+      </div>
+      <div class="header-right">
+        <button class="header-btn">📊📊 รายงาน</button>
+        <button class="header-btn">👤👤 โปรไฟล์</button>
+      </div>
+    </header>
+    <!-- Main Container -->
+    <div class="main-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h3>เมนู</h3>
+        <ul class="sidebar-menu">
+          <li><a href="#">📊📊 แดชบอร์ด</a></li>
+          <li><a href="#">📦📦 สินค้า</a></li>
+          <li><a href="#">📋📋 คําสั่ งซื้อ</a></li>
+          <li><a href="#">👥👥 ลูกค้า</a></li>
+          <li><a href="#">💰💰 ยอดขาย</a></li>
+          <li><a href="#">⚙ ตั้ งค่า</a></li>
+        </ul>
+      </aside>
+      <!-- Content Area -->
+      <main class="content">
+        <!-- Stats Section -->
+        <section class="stats-section">
+          <div class="stat-card sales">
+            <div class="stat-label">ยอดขายวันนี้</div>
+            <div class="stat-value">฿45,230</div>
+            <div class="stat-change">↑ 12% จากเมื่อวาน</div>
+          </div>
+          <div class="stat-card products">
+            <div class="stat-label">สินค้าในสต็อก</div>
+            <div class="stat-value">1,248</div>
+            <div class="stat-change">5 ชิ้ นหมดสต็อก</div>
+          </div>
+          <div class="stat-card customers">
+            <div class="stat-label">ลูกค้าใหม่</div>
+            <div class="stat-value">128</div>
+            <div class="stat-change">↑ 8% จากสัปดาห์ที่แล้ว</div>
+          </div>
+          <div class="stat-card revenue">
+            <div class="stat-label">รายได้รวม (เดือนนี้)</div>
+            <div class="stat-value">฿1.25M</div>
+            <div class="stat-change">↑ 15% จากเดือนที่แล้ว</div>
+          </div>
+        </section>
+        <!-- Products Section Header -->
+        <div class="section-header">
+          <h2>สินค้ายอดนิยม</h2>
+          <a href="#" class="view-all">ดูทั้ งหมด →</a>
+        </div>
+        <!-- Products Grid -->
+        <section class="products-section">
+          <div class="product-card">
+            <div class="product-img">📱📱</div>
+            <div class="product-info">
+              <div class="product-name">Smartphone Pro X</div>
+              <div class="product-desc">มือถือสุดทันสมัย</div>
+              <div class="product-footer">
+                <span class="product-price">฿15,999</span>
+                <span class="stock">45 ชิ้ น</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">⌨</div>
+            <div class="product-info">
+              <div class="product-name">Mechanical Keyboard</div>
+              <div class="product-desc">คีย์บอร์ดเกมมิ่ ง</div>
+              <div class="product-footer">
+                <span class="product-price">฿3,499</span>
+                <span class="stock">120 ชิ้ น</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">🖱🖱</div>
+            <div class="product-info">
+              <div class="product-name">Wireless Mouse</div>
+              <div class="product-desc">เมาส์ไร้สาย precision</div>
+              <div class="product-footer">
+                <span class="product-price">฿1,299</span>
+                <span class="stock">89 ชิ้ น</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">🎧🎧</div>
+            <div class="product-info">
+              <div class="product-name">Headphone Pro</div>
+              <div class="product-desc">หูฟังเสียงสูง</div>
+              <div class="product-footer">
+                <span class="product-price">฿4,999</span>
+                <span class="stock low">3 ชิ้ น</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">🖥🖥</div>
+            <div class="product-info">
+              <div class="product-name">Monitor 4K</div>
+              <div class="product-desc">จอมอนิเตอร์ 27"</div>
+              <div class="product-footer">
+                <span class="product-price">฿8,499</span>
+                <span class="stock">34 ชิ้ น</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">🖨🖨</div>
+            <div class="product-info">
+              <div class="product-name">Laser Printer</div>
+              <div class="product-desc">เครื่องพิมพ์เลเซอร์</div>
+              <div class="product-footer">
+                <span class="product-price">฿6,299</span>
+                <span class="stock">22 ชิ้ น</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Orders Section -->
+        <section class="orders-section">
+          <h3>คําสั่ งซื้อล่าสุด</h3>
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>เลขที่คําสัง่</th>
+                  <th>ลูกค้า</th>
+                  <th>สินค้า</th>
+                  <th>ราคา</th>
+                  <th>วันที่</th>
+                  <th>สถานะ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#ORD001</td>
+                  <td>นายสมชาย ใจดี</td>
+                  <td>Smartphone Pro X</td>
+                  <td>฿15,999</td>
+                  <td>16 ธ.ค. 2025</td>
+                  <td>
+                    <span class="status-badge status-completed">สําเร็จ</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#ORD002</td>
+                  <td>นางสาวมนต์ยา ร่วมใจ</td>
+                  <td>Mechanical Keyboard + Mouse</td>
+                  <td>฿4,798</td>
+                  <td>16 ธ.ค. 2025</td>
+                  <td>
+                    <span class="status-badge status-pending">รอจัดส่ง</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#ORD003</td>
+                  <td>นายกวิน สุขสว่าง</td>
+                  <td>Monitor 4K</td>
+                  <td>฿8,499</td>
+                  <td>15 ธ.ค. 2025</td>
+                  <td>
+                    <span class="status-badge status-completed">สําเร็จ</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#ORD004</td>
+                  <td>นางพัฒนา วรรณพงศ์</td>
+                  <td>Headphone Pro</td>
+                  <td>฿4,999</td>
+                  <td>15 ธ.ค. 2025</td>
+                  <td>
+                    <span class="status-badge status-cancelled">ยกเลิก</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#ORD005</td>
+                  <td>นายวิทยา ศรีสุข</td>
+                  <td>Laser Printer</td>
+                  <td>฿6,299</td>
+                  <td>14 ธ.ค. 2025</td>
+                  <td>
+                    <span class="status-badge status-completed">สําเร็จ</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#ORD006</td>
+                  <td>นางสาวนพ ไทยวิทย์</td>
+                  <td>Smartphone Pro X + Wireless Mouse</td>
+                  <td>฿17,298</td>
+                  <td>14 ธ.ค. 2025</td>
+                  <td>
+                    <span class="status-badge status-pending">รอจัดส่ง</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
